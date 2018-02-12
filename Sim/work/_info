@@ -1,0 +1,131 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Admin\Desktop\VHDL\Practice Work\VHDL2008
+vdeco_4x16
+VL=4c7^7FGEe6?<`70KW5N0
+r1
+31
+I4KnhGfmGcNNb3bJ6=Z@_T0
+Z0 dC:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Sim
+Z1 w1432811844
+Z2 8C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3b.v
+Z3 FC:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3b.v
+L0 78
+Z4 OE;L;10.1d;51
+Z5 !s108 1432811850.772000
+Z6 !s107 C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3b.v|
+Z7 !s90 -reportprogress|300|-work|work|-vopt|C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3b.v|
+Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 Re@b2jSe`@lBdn;>HEQ:a1
+!i10b 1
+vdff2
+VDk88zY1lGCEF^1;SUjHS33
+r1
+31
+IlDgMU4K`b9VHYUC[bhPNA1
+Z9 dC:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Sim
+R1
+R2
+R3
+L0 31
+R4
+R5
+R6
+R7
+R8
+!s85 0
+!s100 NG^P5^ze7JZ85e8PnOba`0
+!i10b 1
+vmemb
+V0c^3D6@@D`P[Vg3K8Ej_Y1
+r1
+31
+IK]ZM<g:KFT0J2dRFzg^K^0
+R9
+w1432809106
+8C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3a.v
+FC:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3a.v
+L0 1
+R4
+R8
+!s85 0
+!s100 eB8GEO=mjm;VHeQ4fI<:g3
+!s90 -reportprogress|300|-work|work|-vopt|C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3a.v|
+!s108 1432811850.523000
+!s107 C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab4\Q3\Src\l4q3a.v|
+!i10b 1
+vmems
+Vl:3:EelSIeJ>C]cmb_QlX0
+r1
+31
+I?momd>PW4iU273^b36HQe0
+R9
+R1
+R2
+R3
+L0 1
+R4
+R5
+R6
+R7
+R8
+!s85 0
+!s100 =8bQR2B8LOS97`JOEa]B>3
+!i10b 1
+vmux16
+VC_YKPg78R5oC6elWoMNc>2
+r1
+31
+IZdf`jHb<jNA`cZFzP3PF13
+R9
+R1
+R2
+R3
+L0 53
+R4
+R5
+R6
+R7
+R8
+!s85 0
+!s100 aNg961lRJagVULCI`TENQ1
+!i10b 1
+vmux2
+VgSTkOoJJRKEcPlMb<Q^HD3
+r1
+!s85 0
+31
+Izi0eeH91hgJA3kfdFaSK_0
+R9
+R1
+R2
+R3
+L0 40
+R4
+R5
+R6
+R7
+R8
+!i10b 1
+!s100 jefNRa8Ao^:KcG2B]BOF61
+vtbm
+VoJXgfe8<<ZRn7@=cEPmlM3
+r1
+31
+IZd:I2bR4OjQ0?ZoOBz]c=3
+R9
+w1432810278
+8C:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab4/Q3/Src/tb_l4q3.v
+FC:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab4/Q3/Src/tb_l4q3.v
+L0 1
+R4
+R8
+!s85 0
+!s100 SM5[UmQjz[iea4=[daP8b2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab4/Q3/Src/tb_l4q3.v|
+!s108 1432811850.647000
+!s107 C:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab4/Q3/Src/tb_l4q3.v|
+!i10b 1

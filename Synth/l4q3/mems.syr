@@ -1,0 +1,430 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: mems.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mems.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mems"
+Output Format                      : NGC
+Target Device                      : xc4vlx25-10-ff668
+
+---- Source Options
+Top Module Name                    : mems
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 32
+Number of Regional Clock Buffers   : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../Src/l4q3b.v" in library work
+Module <mems> compiled
+Module <dff2> compiled
+Module <mux2> compiled
+Module <mux16> compiled
+Module <deco_4x16> compiled
+No errors in compilation
+Analysis of file <"mems.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <mems> in library <work>.
+
+Analyzing hierarchy for module <deco_4x16> in library <work>.
+
+Analyzing hierarchy for module <dff2> in library <work>.
+
+Analyzing hierarchy for module <mux16> in library <work>.
+
+Analyzing hierarchy for module <mux2> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <mems>.
+Module <mems> is correct for synthesis.
+ 
+Analyzing module <deco_4x16> in library <work>.
+Module <deco_4x16> is correct for synthesis.
+ 
+Analyzing module <dff2> in library <work>.
+Module <dff2> is correct for synthesis.
+ 
+Analyzing module <mux16> in library <work>.
+Module <mux16> is correct for synthesis.
+ 
+Analyzing module <mux2> in library <work>.
+Module <mux2> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <deco_4x16>.
+    Related source file is "../../Src/l4q3b.v".
+    Found 6-bit subtractor for signal <d$addsub0000> created at line 86.
+    Found 16-bit shifter logical left for signal <d$shift0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <deco_4x16> synthesized.
+
+
+Synthesizing Unit <dff2>.
+    Related source file is "../../Src/l4q3b.v".
+    Found 16-bit register for signal <op>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <dff2> synthesized.
+
+
+Synthesizing Unit <mux16>.
+    Related source file is "../../Src/l4q3b.v".
+    Found 16-bit 16-to-1 multiplexer for signal <op>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <mux16> synthesized.
+
+
+Synthesizing Unit <mux2>.
+    Related source file is "../../Src/l4q3b.v".
+WARNING:Xst:737 - Found 16-bit latch for signal <op>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <mux2> synthesized.
+
+
+Synthesizing Unit <mems>.
+    Related source file is "../../Src/l4q3b.v".
+Unit <mems> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 16
+ 16-bit register                                       : 16
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 1
+ 16-bit 16-to-1 multiplexer                            : 1
+# Logic shifters                                       : 1
+ 16-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 256
+ Flip-Flops                                            : 256
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 1
+ 16-bit 16-to-1 multiplexer                            : 1
+# Logic shifters                                       : 1
+ 16-bit shifter logical left                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mems> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mems, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 256
+ Flip-Flops                                            : 256
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mems.ngr
+Top Level Output File Name         : mems
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 39
+
+Cell Usage :
+# BELS                             : 264
+#      GND                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 128
+#      LUT4                        : 16
+#      MUXF5                       : 68
+#      MUXF6                       : 32
+#      MUXF7                       : 16
+# FlipFlops/Latches                : 272
+#      FDE                         : 256
+#      LD                          : 16
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 37
+#      IBUF                        : 21
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 4vlx25ff668-10 
+
+ Number of Slices:                      215  out of  10752     1%  
+ Number of Slice Flip Flops:            256  out of  21504     1%  
+ Number of 4 input LUTs:                147  out of  21504     0%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    448     8%  
+    IOB Flip Flops:                      16
+ Number of GCLKs:                         2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 256   |
+oe                                 | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -10
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 4.423ns
+   Maximum output required time after clock: 4.790ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1536 / 512
+-------------------------------------------------------------------------
+Offset:              4.423ns (Levels of Logic = 3)
+  Source:            addr<2> (PAD)
+  Destination:       d16/op_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: addr<2> to d16/op_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   0.965   1.180  addr_2_IBUF (addr_2_IBUF)
+     LUT2:I0->O            4   0.195   0.755  deco1/d<4>11 (N5)
+     LUT4:I0->O           16   0.195   0.593  deco1/d<7>1 (en1<7>)
+     FDE:CE                    0.540          d8/op_0
+    ----------------------------------------
+    Total                      4.423ns (1.895ns logic, 2.528ns route)
+                                       (42.8% logic, 57.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'oe'
+  Total number of paths / destination ports: 240 / 16
+-------------------------------------------------------------------------
+Offset:              4.048ns (Levels of Logic = 5)
+  Source:            addr<0> (PAD)
+  Destination:       m2/op_0 (LATCH)
+  Destination Clock: oe falling
+
+  Data Path: addr<0> to m2/op_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   0.965   1.694  addr_0_IBUF (addr_0_IBUF)
+     LUT3:I0->O            1   0.195   0.000  m1/Mmux_op_6 (m1/Mmux_op_6)
+     MUXF5:I0->O           1   0.382   0.000  m1/Mmux_op_4_f5 (m1/Mmux_op_4_f5)
+     MUXF6:I1->O           1   0.395   0.000  m1/Mmux_op_3_f6 (m1/Mmux_op_3_f6)
+     MUXF7:I1->O           1   0.395   0.000  m1/Mmux_op_2_f7 (top<0>)
+     LD:D                      0.022          m2/op_0
+    ----------------------------------------
+    Total                      4.048ns (2.354ns logic, 1.694ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'oe'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.790ns (Levels of Logic = 1)
+  Source:            m2/op_15 (LATCH)
+  Destination:       op<15> (PAD)
+  Source Clock:      oe falling
+
+  Data Path: m2/op_15 to op<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.473   0.360  m2/op_15 (m2/op_15)
+     OBUF:I->O                 3.957          op_15_OBUF (op<15>)
+    ----------------------------------------
+    Total                      4.790ns (4.430ns logic, 0.360ns route)
+                                       (92.5% logic, 7.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.62 secs
+ 
+--> 
+
+Total memory usage is 214820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
